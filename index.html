@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate answer</title>
+    
+    <style>
+        .main
+        {
+            height: 500px;
+            width: 400px;
+            border: 2px solid;
+            margin: 20px auto;
+            display: flex;
+            overflow: hidden;
+            
+        }
+        .part1
+        {
+            height: 500px;
+            width: 100px;
+            border: 2px solid yellow;
+            position: relative;
+        }
+      
+        .ans
+        {
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            position: absolute;
+            transition: 1s;
+            top: 0;
+            left: 400px;
+        }
+
+        .answ
+        {
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            position: absolute; 
+            top: 0px;
+            left: 400px;
+            transition: 1s;
+        }
+
+       .btn:hover .ans
+        {
+        left: 100px;
+         }
+
+       .ctn:hover .answ
+       {
+        left: 100px;
+       }
+       #b3
+       {
+        visibility:hidden ;
+       }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+            <div class="part1">
+                
+           
+                <button id="b1" onclick="btn()"> 
+                    Question 1
+                    <div class="ans">
+                        answer1
+                    </div>
+                </button><br><br>
+
+                <button id="b2" onclick="ctn()">
+                    Question 2
+                    <div class="answ">
+                        answer2
+                    </div>
+                </button><br><br>
+                
+                <button id="b3" onclick="ctn()">
+                        Question 2
+                        <div class="answ">
+                            answer2
+                        </div>
+                    </button>
+
+            </div>
+    </div>
+
+      
+
+        <script>
+                ans1=document.querySelector('#b1')
+                ans2=document.querySelector('#b2')
+            ans3=document.querySelector(".ans")
+            ans4=document.querySelector(".answ")
+            ans5=document.querySelector("#b3")
+
+           
+
+            function btn()
+            {
+               ans3.style.left="100%"
+               ans4.style.left="400%"
+               ans5.style.visibility="visible"
+               ans2.style.visibility=" hidden"
+
+            }
+
+            function ctn()
+            {
+                ans4.style.left="100%"
+                ans3.style.left="400%"
+                ans5.style.visibility="hidden"
+                ans2.style.visibility="visible"
+
+            }
+        </script>
+
+
+
+
+   
+</body>
+</html>
